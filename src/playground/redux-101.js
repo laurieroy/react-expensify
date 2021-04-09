@@ -20,7 +20,11 @@ const resestCount = () => ({
 	type: 'RESET'
 });
 
-const store = createStore((state = { count: 0 }, action) => {
+// Reducers - 
+// 1. are pure functions. Output is only determined by input
+//  - doesn't use or change anything outside of function scope
+// 2. Never change state or action
+const countReducer = (state = { count: 0 }, action) => {
 	switch (action.type) {
 		case 'INCREMENT':
 			return {
@@ -42,7 +46,9 @@ const store = createStore((state = { count: 0 }, action) => {
 		default: 
 			return state;
 		}
-});
+};
+
+const store = createStore(countReducer);
 
 store.dispatch(incrementCount({ incrementBy: 5 }));
 
