@@ -22,9 +22,9 @@ const expenses = [{
 	amount: 2000,
 	createdAt: 0
 }]
-// alphabetically: [1, 0, 3]
+// alphabetically: [1, 0, 2]
 // oldest age:  [1, 2, 0]
-// most expensive cost: [0, 2, 3]
+// most expensive cost: [0, 1, 2]
 test('should filter by text value', () => {
 	const filters = {
 		text: 'e',
@@ -56,14 +56,27 @@ test('should filter by endDate', () => {
 		endDate: moment(0)
 	}
 	const result = selectExpenses(expenses, filters);
-	expect(result).toEqual([ expenses[1], expenses[2]])
+	expect(result).toEqual([ expenses[2], expenses[1]])
 })
 
 test('should sort by date', () => {
+	const filters = {
+		text: '',
+		sortBy: 'date',
+		startDate: undefined,
+		endDate: undefined
+	}
 	const result = selectExpenses(expenses, filters);
 	expect(result).toEqual([ expenses[0], expenses[2], expenses[1]])
 });
 
 test('should sort by amount', () => {
-	// const result = selectExpenses(expenses, filters);
+	const filters = {
+		text: '',
+		sortBy: 'amount',
+		startDate: undefined,
+		endDate: undefined
+	}
+	const result = selectExpenses(expenses, filters);
+	expect(result).toEqual([expenses[2], expenses[1], expenses[0]])
 });
