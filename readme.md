@@ -4,14 +4,18 @@ This is a work in progress... User can add an Expense description, amount, date 
 
 This is a code along from [Andrew Mead](https://mead.io/)'s [The Complete React Developer Course](https://www.udemy.com/course/react-2nd-edition/). I accessed the course through Packt, so the course is not updated.
 
+Tech Stack:
+
 React 16 
 Redux 
 Webpack with babel-preprocessor
+Tested with Jest
 
 Datepicker (React-dates) and moment for the date
 normalize.css, note.sass, sass-loader for styling
 
 In your terminal:
+
 ```
  yarn run dev-server
 ```
