@@ -34,7 +34,7 @@ test('should setup add expense action object with provided values', () => {
 	const action = addExpense(expenseData);
 	expect(action).toEqual({
 		type: 'ADD_EXPENSE',
-		expnse: {
+		expense: {
 			...expenseData,
 			id: expect.any(String)
 			// description: 'Rent',
