@@ -4,16 +4,19 @@ exports[`should render ExpenseListItem 1`] = `
 <div>
   <Link
     replace={false}
-    to="/edit/undefined"
+    to="/edit/1"
   >
     <h3>
        
+      Coffee
        
     </h3>
   </Link>
   <p>
      $
+    250
      - 
+    86400000
      
   </p>
 </div>

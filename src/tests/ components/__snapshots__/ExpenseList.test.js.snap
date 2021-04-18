@@ -2,63 +2,13 @@
 
 exports[`should render ExpenseList with empty message if no expenses 1`] = `
 <div>
-  <ExpenseListItem
-    amount={250}
-    createdAt={86400000}
-    description="Coffee"
-    id="1"
-    key="1"
-    note=""
-  />
-  <ExpenseListItem
-    amount={650}
-    createdAt={-86400000}
-    description="Beer"
-    id="2"
-    key="2"
-    note=""
-  />
-  <ExpenseListItem
-    amount={2000}
-    createdAt={0}
-    description="Gas"
-    id="3"
-    key="3"
-    note=""
-  />
+  <p>
+    No expenses. Add your first!
+  </p>
 </div>
 `;
 
 exports[`should render ExpenseList with expenses 1`] = `
-<div>
-  <ExpenseListItem
-    amount={250}
-    createdAt={86400000}
-    description="Coffee"
-    id="1"
-    key="1"
-    note=""
-  />
-  <ExpenseListItem
-    amount={650}
-    createdAt={-86400000}
-    description="Beer"
-    id="2"
-    key="2"
-    note=""
-  />
-  <ExpenseListItem
-    amount={2000}
-    createdAt={0}
-    description="Gas"
-    id="3"
-    key="3"
-    note=""
-  />
-</div>
-`;
-
-exports[`should render ExpenseList with expenses 2`] = `
 <div>
   <ExpenseListItem
     amount={250}

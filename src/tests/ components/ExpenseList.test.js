@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import { shallow } from 'enzyme';
 import { ExpenseList } from '../../components/ExpenseList';
 import expenses from '../fixtures/expenses';
