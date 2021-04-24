@@ -16,6 +16,18 @@ normalize.css, note.sass, sass-loader for styling
 
 In your terminal:
 
+Clone the project:
+```
+git clone git@github.com:laurieroy/react-expensify.git
+```
+Install dependencies:
+```
+yarn install
+```
+
+Run locally on localhost:8080
 ```
  yarn run dev-server
 ```
+
+[Use the demo version:] Hosted on Heroku, so it might take a few seconds to spin up. It's worth it!
