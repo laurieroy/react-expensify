@@ -8,7 +8,7 @@ Tech Stack:
 
 React 16 
 Redux 
-Webpack with babel-preprocessor
+Webpack4 with babel-preprocessor
 Tested with Jest, Enzyme
 
 Datepicker (React-dates) and moment for the date

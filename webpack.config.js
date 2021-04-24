@@ -1,11 +1,12 @@
 const path = require("path");
 
 module.exports = {
-	entry: "./src/app.js",
+	mode: "development",
+	entry: "./src/index.js",
 	// entry: "./src/playground/hoc.js",
 	output: {
-		path: path.join(__dirname, "public"),
-		filename: "bundle.js"
+		path: path.resolve(__dirname, "dist"),
+		filename: "main.bundle.js"
 	},
 	module: {
 		rules: [{
