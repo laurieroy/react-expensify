@@ -1,10 +1,10 @@
-import React from "react";
-import { shallow } from "enzyme";
+import React from 'react';
+import { shallow } from 'enzyme';
 import moment from 'moment';
-import { ExpenseListFilters } from "../../components/ExpenseListFilters";
-import { filters, altFilters } from "../fixtures/filters";
+import { ExpenseListFilters } from '../../components/ExpenseListFilters';
+import { filters, altFilters } from '../fixtures/filters';
 
-let setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate, history, wrapper;
+let setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate, wrapper;
 
 beforeEach(() => {
 	setTextFilter = jest.fn();
@@ -46,7 +46,7 @@ test('should handle date changes correctly', () => {
 test('should handle date focus changes correctly', () => {
 	const calendarFocused = 'endDate';
 	wrapper.find('DateRangePicker').prop('onFocusChange')(calendarFocused);
-	expect(wrapper.state('calendarFocuses')).toBe(calendarFocused);
+	expect(wrapper.state('calendarFocused')).toBe(calendarFocused);
 });
 
 test('should handle text change correctly', () => {
@@ -59,11 +59,11 @@ test('should handle text change correctly', () => {
 
 test('should sort by amount correctly', () => {
 	const value = 'amount';
-	wrapper.find("select").simulate("change", {
+	wrapper.find('select').simulate('change', {
 		target: { value }
 	});
  
-  expect("sortByAmount").toHaveBeenCalled();
+  expect(sortByAmount).toHaveBeenCalled();
 });
 
 test('should sort by date correctly', () => {
@@ -71,11 +71,9 @@ test('should sort by date correctly', () => {
 	wrapper.setProps({
 		filters: altFilters
 	});
-
-	wrapper.find("select").simulate("change", {
+	wrapper.find('select').simulate('change', {
 		target: { value }
 	});
-
-  expect("sortByDate").toHaveBeenLastCalledWith(value);
+	expect(sortByDate).toHaveBeenCalled();
 });
 
