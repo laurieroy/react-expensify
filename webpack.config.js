@@ -5,7 +5,7 @@ module.exports = {
 	// entry: "./src/playground/hoc.js",
 	output: {
 		path: path.join(__dirname, "public"),
-		filename: 'bundle.js'
+		filename: "bundle.js"
 	},
 	module: {
 		rules: [{
@@ -15,9 +15,9 @@ module.exports = {
 		}, {
 			test: /\.s?css$/,
 			use: [
-				'style-loader',
-				'css-loader',
-				'sass-loader'
+				"style-loader",
+				"css-loader",
+				"sass-loader"
 			]
 		}]
 	},
