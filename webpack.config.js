@@ -1,9 +1,10 @@
 const path = require("path");
 const webpack = require("webpack");
-// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env) => {
   const isProduction = env === "production";
+  const CSSExtract = new MiniCssExtractPlugin('styles.css');
   return {
     entry: "./src/app.js",
     // entry: './src/playground/hoc.js',
@@ -20,18 +21,27 @@ module.exports = (env) => {
         },
         {
           test: /\.s?css$/,
-          use: MiniCssExtractPlugin.loader({
-            use: ["css-loader", "sass-loader"],
-          }),
-        },
-      ],
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader:  "css-loader", 
+              options: {
+                "sourceMap": true
+              }
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                "sourceMap": true
+              },
+            }
+          ] 
+        }]
     },
-    // plugins: [
-    //   new MiniCssExtractPlugin({
-    //     filename: "styles.css",
-    //   }),
-    // ],
-    devtool: isProduction ? "source-map" : "cheap-module-eval-source-map",
+    plugins: [
+      CSSExtract
+    ],
+    devtool: isProduction ? "source-map" : "inline-source-map",
     devServer: {
       contentBase: path.join(__dirname, "public"),
       historyApiFallback: true,
