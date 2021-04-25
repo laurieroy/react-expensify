@@ -1,12 +1,13 @@
 {
   "name": "expensify",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "author": "lauretteroy <laurieroy.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json"
   },
@@ -39,13 +40,14 @@
     "redux": "3.7.2",
     "sass-loader": "6.0.7",
     "style-loader": "0.18.2",
-    "uuid": "3.1.0",
-    "validator": "8.0.0",
-    "webpack-dev-server": "2.5.1"
+    "validator": "8.0.0"
   },
   "devDependencies": {
     "html-webpack-plugin": "4",
+    "uuid": "3.1.0",
     "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   }
 }
