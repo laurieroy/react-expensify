@@ -9,10 +9,13 @@ Tech Stack:
 React 16 
 Redux 
 Webpack4 with babel-preprocessor
+
 Tested with Jest, Enzyme
 
 Datepicker (React-dates) and moment for the date
-normalize.css, note.sass, sass-loader for styling
+normalize.css, node.sass, sass-loader for styling with  MiniCssExtractPlugin for the webpack build
+
+<!-- See the [Demo]( https://laurie-expensify-express.herokuapp.com/ ). It might take a few seconds to spin up. -->
 
 In your terminal:
 
